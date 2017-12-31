@@ -110,7 +110,7 @@ canvas.addEventListener(\"click\",function(event){\
     var pixelData = context.getImageData(eventLocation.x, eventLocation.y, 1, 1).data; \
     var hex = (\"000000\" + rgbToHex(pixelData[0], pixelData[1], pixelData[2])).slice(-6);\
     document.getElementById(\"rgb\").value = hex;\
-    document.getElementById(\"Form\").submit();\
+    if (hex != "000000") document.getElementById(\"Form\").submit();\
 },false);\
 }\
 </script>\
